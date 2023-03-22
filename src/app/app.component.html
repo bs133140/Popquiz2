@@ -1,0 +1,6 @@
+<div>
+ <app-poster></app-poster>
+ <app-teamlist *ngIf="showList"></app-teamlist>
+ <app-teamranking [autoscroll]="scrolling" *ngIf="showRanking"></app-teamranking>
+ <app-footer (autoscroll)="autoscroll($event)" (ranking)="ranking($event)" (filter)="filter($event)" (home)="home()"></app-footer>
+</div>

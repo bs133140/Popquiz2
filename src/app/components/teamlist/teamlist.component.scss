@@ -1,0 +1,14 @@
+.list {
+    position: absolute;
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    z-index: 10;
+    top:0;
+    background-color: rgba(246, 161, 16, 0.97);
+    overflow:auto;
+}
+
+.sticky {
+    background-color: rgb(246, 161, 16);
+}

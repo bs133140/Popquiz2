@@ -1,0 +1,60 @@
+footer {
+    position:absolute;
+    bottom:0;
+    height:30vh;
+    width:100%;
+  }
+
+  
+.Menu {
+    position:absolute;
+    bottom:0;
+    height:0px;
+    width: 100%;;
+    background-color: rgb(246, 161, 16);  
+    overflow: hidden;
+    display:flex;
+    transition: height 0.3s;
+  }
+  
+  footer:hover .Menu{
+      height:10vh;
+      transition: height 0.3s;
+  }
+
+  .sticky {
+    height: 10vh;
+  }
+  
+  .logo img {
+    margin-left:1.5vh;
+    margin-top:1.8vh;
+    height:7vh
+  }
+  
+  .options {
+    flex-grow: 1;
+    text-align: right;
+    padding:25px;
+  }
+  
+  ul {
+    padding:0;
+    margin:0;
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+  
+  .button {
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  #fileInput {
+    display: none;
+  }
+  
