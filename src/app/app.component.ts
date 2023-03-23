@@ -23,7 +23,8 @@ export class AppComponent {
       this.scoreboard = scoreboard;
 
       if (this.scoreboard) {
-        this.ranking(true);
+        this.showRanking = true;
+        this.ranking();
       }
     });
   }
@@ -32,8 +33,11 @@ export class AppComponent {
     this.scrolling = state;
   }
 
-  ranking(ranking: boolean) {
-    if (ranking) {
+  ranking(toggle: boolean = false) {
+    if(toggle) {
+      this.showRanking = !this.showRanking;
+    }
+    if (this.showRanking) {
       this.showList = false;
       this.showRanking = true;
       this.showRankingRoundup = true;
@@ -43,7 +47,7 @@ export class AppComponent {
       this.showRanking = false;
       this.showRankingRoundup = false;
       this.showListRoundup = false;
-    }
+    }    
   }
 
   filter(filter: number) {

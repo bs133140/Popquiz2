@@ -32,7 +32,6 @@ export class FooterComponent implements OnInit {
   filterState: number = 0;
   loaded: boolean;
   stickyMenu: boolean;
-  showRanking: boolean;
 
   @ViewChild('fileInput') fileInput: ElementRef;
   @Output() autoscroll = new EventEmitter<boolean>();
@@ -103,8 +102,7 @@ export class FooterComponent implements OnInit {
   }
 
   toggleRanking() {
-    this.showRanking = !this.showRanking;
-    this.ranking.emit(this.showRanking);
+    this.ranking.emit(true);
   }
 
   toggleFilter() {

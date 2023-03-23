@@ -27,6 +27,15 @@ body {
     border-radius: 10px;
   }
 
+.badge.green {
+  background-color: transparent;
+  color: #000;
+}
+
+.badge.orange {
+  background-color: rgba(0,0,0,0.5);
+}
+
   /* width */
 ::-webkit-scrollbar {
     width: 10px;

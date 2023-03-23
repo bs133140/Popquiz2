@@ -34,8 +34,7 @@ footer {
   
   .options {
     flex-grow: 1;
-    text-align: right;
-    padding:25px;
+    text-align: right;    
   }
   
   ul {
@@ -43,6 +42,8 @@ footer {
     margin:0;
     display:flex;
     flex-direction: row-reverse;
+    align-items: center;
+    height: 100%;
   }
   
   li {

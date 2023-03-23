@@ -63,7 +63,7 @@ export class TeamlistComponent {
                 ? this.HTMLEncode(team.name.substring(0, 35)) + ' ...'
                 : this.HTMLEncode(team.name)) +
               (team.type == 1
-                ? '&nbsp;<span class="cbadge glyphicon glyphicon-bookmark">CC</span>'
+                ? '&nbsp;&#9929'
                 : ''),
           };
 
@@ -92,6 +92,7 @@ export class TeamlistComponent {
       });
     }
 
+    console.info('LIST', this.displayedColumns, this.columns, this.list);
     this.dataSource = new MatTableDataSource<any>(this.list);
   }
 
