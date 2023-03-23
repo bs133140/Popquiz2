@@ -14,6 +14,9 @@ export class TeamlistComponent {
   columns: Column[] = [];
   list: any[] = [];
   dataSource = new MatTableDataSource<any>(this.list);
+  title: string;
+  showRoundup: boolean;
+  lastroundaverage: string;
 
   constructor(private scoreboardService: ScoreboardService) {}
 
@@ -28,6 +31,15 @@ export class TeamlistComponent {
     this.list = [];
     this.columns = [];
     this.displayedColumns = ['id', 'team'];
+    this.title =  'SCORES PER RONDE';     
+    this.showRoundup = true;   
+  
+    if(this.scoreboard.teamtype === 1) {
+      this.title += ' - Circuitploegen&nbsp;&#9929';
+    }
+    if(this.scoreboard.teamtype === 2) {
+      this.title += ' - Gelegenheidsploegen';
+    }
 
     // Set rounds
     if (this.scoreboard && this.scoreboard.rounds) {
@@ -92,7 +104,7 @@ export class TeamlistComponent {
       });
     }
 
-    console.info('LIST', this.displayedColumns, this.columns, this.list);
+    this.lastroundaverage = parseFloat((this.scoreboard.lastroundtotal / this.scoreboard.filteredteams)+'').toFixed(1);
     this.dataSource = new MatTableDataSource<any>(this.list);
   }
 

@@ -1,3 +1,27 @@
+<div class="list-roundup" *ngIf="showRoundup" (click)="showRoundup = false">
+  <div class="panel">
+      <div class="title" [innerHTML]="title"></div>
+      <div class="row">
+          <div>
+              <h4>HOOGSTE SCORE</h4>
+              <div class="highscore">
+                {{scoreboard.lastroundhighest}} / {{scoreboard.rounds[scoreboard.lastround].max}}
+              </div>
+          </div>
+          <div>
+              <h4>GEMIDDELDE SCORE</h4>
+              <div class="highscore">
+                {{lastroundaverage}} / {{scoreboard.rounds[scoreboard.lastround].max}}
+              </div>
+          </div>
+      </div>
+      <div class="legenda2">
+        <div><span class="badge orange">&nbsp;&nbsp;&nbsp;</span> Minder goede score</div>
+        <div><span class="badge red">&nbsp;&nbsp;&nbsp;</span> Slechte score</div>
+      </div>
+  </div>
+</div>
+
 <div class="list">
     <table mat-table [dataSource]="dataSource">
 

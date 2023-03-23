@@ -9,6 +9,7 @@ export class Scoreboard {
   lastroundhighest = 0;
   teamtype = 0; //  0 = all, 1 = circuit, 2 = gelegenheid
   specSort: boolean;
+  filteredteams: number;
 }
 
 export class Round {

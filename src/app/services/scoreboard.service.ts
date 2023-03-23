@@ -31,7 +31,8 @@ export class ScoreboardService {
       lastroundtotal: 0,
       lastroundhighest: 0,
       specSort: false,
-      teamtype: 0
+      teamtype: 0,
+      filteredteams: 0,
     };
 
     this.subjectScoreboard.next(this.scoreboard);
@@ -115,7 +116,7 @@ export class ScoreboardService {
   }
 
   setRanking(pricesort?: boolean) {
-    let filteredteams = 0;
+    this.scoreboard.filteredteams = 0;
     this.scoreboard.lastroundtotal = 0;
     this.scoreboard.lastroundhighest = 0;
 
@@ -221,7 +222,7 @@ export class ScoreboardService {
             .type == this.scoreboard.teamtype
         ) {
           if (t == this.scoreboard.lastround) {
-            filteredteams++;
+            this.scoreboard.filteredteams++;
             this.scoreboard.lastroundtotal +=
               this.scoreboard.rankingPerRound[t][s].score;
             if (
