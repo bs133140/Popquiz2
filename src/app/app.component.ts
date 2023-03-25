@@ -15,15 +15,21 @@ export class AppComponent {
   scrolling: boolean;
   showRankingRoundup: boolean;
   showListRoundup: boolean;
+  firstCall: boolean = true;
 
-  constructor(private scoreboardService: ScoreboardService) {}
+  constructor(private scoreboardService: ScoreboardService) {
+    
+  }
 
   ngOnInit(): void {
     this.scoreboardService.scoreboard$.subscribe((scoreboard) => {
       this.scoreboard = scoreboard;
 
-      if (this.scoreboard) {
-        this.showRanking = true;
+      if (this.scoreboard) {   
+        if(this.firstCall) {
+          this.firstCall = false;
+          this.showRanking = true;
+        }     
         this.ranking();
       }
     });
