@@ -1,4 +1,5 @@
-<div class="list-roundup" *ngIf="showRoundup" (click)="showRoundup = false">
+<div class="list-roundup" *ngIf="showRoundup" [ngClass]="{'hidden': hideRoundup}" (click)="doHideRoundup()">
+  <div class="sideimg"><img src="../../../assets/2023/logov1.jpg"/></div>
   <div class="panel">
       <div class="title" [innerHTML]="title"></div>
       <div class="row">
@@ -16,13 +17,14 @@
           </div>
       </div>
       <div class="legenda2">
-        <div><span class="badge orange">&nbsp;&nbsp;&nbsp;</span> Minder goede score</div>
-        <div><span class="badge red">&nbsp;&nbsp;&nbsp;</span> Slechte score</div>
+        <div><span class="badge orangei">&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;Minder goede score</div>
+        <div><span class="badge redi">&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;Slechte score</div>
       </div>
   </div>
+  <div class="sideimg"><img src="../../../assets/2023/logov2.jpg"/></div>
 </div>
 
-<div class="list">
+<div class="list" #list>
     <table mat-table [dataSource]="dataSource">
 
         <!--- Note that these columns can be defined in any order.

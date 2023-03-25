@@ -31,9 +31,33 @@ body {
   background-color: transparent;
   color: #000;
 }
+.badge.orangei {
+  background-color: rgba(246, 161, 16, 0.5); 
+  color: #000;
+}
 
 .badge.orange {
   background-color: rgba(0,0,0,0.5);
+}
+
+.badge.redi {
+  background-color: rgb(246, 161, 16); 
+  color: #000;
+}
+
+.cbadge, .cbig {
+  display:inline-block;
+  width:12px;
+  height:12px;
+  background-image: url(assets/2023/certified-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.cbig{
+  width:42px;
+  height:42px;
+  background-image: url(assets/2023/certified-icon-y.svg);
 }
 
   /* width */

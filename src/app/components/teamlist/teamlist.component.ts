@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Input, OnChanges, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Column, Scoreboard } from 'src/app/models/scoreboard.model';
 import { ScoreboardService } from 'src/app/services/scoreboard.service';
@@ -8,23 +8,61 @@ import { ScoreboardService } from 'src/app/services/scoreboard.service';
   templateUrl: './teamlist.component.html',
   styleUrls: ['./teamlist.component.scss'],
 })
-export class TeamlistComponent {
+export class TeamlistComponent implements OnInit, OnChanges {
   scoreboard: Scoreboard;
   displayedColumns: string[] = [];
   columns: Column[] = [];
   list: any[] = [];
   dataSource = new MatTableDataSource<any>(this.list);
   title: string;
+  scrollEvent: any;
+  scrollDirection = 1;
   showRoundup: boolean;
   lastroundaverage: string;
+  hideRoundup: boolean;
+
+  @Input() autoscroll: boolean;
+  @ViewChild('list') rankingWrapper: ElementRef;
 
   constructor(private scoreboardService: ScoreboardService) {}
 
   ngOnInit(): void {
     this.scoreboardService.scoreboard$.subscribe((scoreboard) => {
       this.scoreboard = scoreboard;
+      this.hideRoundup = false;
+      this.showRoundup = true;
       this.renderList();
     });
+  }
+  ngOnChanges(changes:any) {
+    if(changes.autoscroll){
+      if(this.autoscroll) {
+        let pauze = false;
+        this.scrollEvent = setInterval(()=>{
+          this.rankingWrapper.nativeElement.scrollTo({
+            top: this.rankingWrapper.nativeElement.scrollTop+this.scrollDirection,
+          });
+          if(!pauze && this.rankingWrapper.nativeElement.scrollTop+this.rankingWrapper.nativeElement.clientHeight>= this.rankingWrapper.nativeElement.firstChild.clientHeight) {
+            const newDirection = -1*this.scrollDirection;
+            this.scrollDirection = 0;
+            pauze = true;
+            setTimeout(()=>{this.scrollDirection = newDirection;pauze=false;}, 2000);
+          }
+          if(!pauze && this.rankingWrapper.nativeElement.scrollTop==0) {
+            const newDirection = -1*this.scrollDirection;
+            pauze = true;
+            setTimeout(()=>{this.scrollDirection = newDirection;pauze=false;}, 2000);
+          }
+        }, 10);
+      } else {
+        clearInterval(this.scrollEvent);
+      }
+    }
+  }
+
+  doHideRoundup() {
+    this.hideRoundup = true;
+    setTimeout(()=>{this.showRoundup = false},2000);
   }
 
   renderList() {
@@ -35,10 +73,10 @@ export class TeamlistComponent {
     this.showRoundup = true;   
   
     if(this.scoreboard.teamtype === 1) {
-      this.title += ' - Circuitploegen&nbsp;&#9929';
+      this.title += ' <br>Circuitploegen&nbsp;<span class="cbig"></span>';
     }
     if(this.scoreboard.teamtype === 2) {
-      this.title += ' - Gelegenheidsploegen';
+      this.title += ' <br>Gelegenheidsploegen';
     }
 
     // Set rounds
@@ -75,7 +113,7 @@ export class TeamlistComponent {
                 ? this.HTMLEncode(team.name.substring(0, 35)) + ' ...'
                 : this.HTMLEncode(team.name)) +
               (team.type == 1
-                ? '&nbsp;&#9929'
+                ? '&nbsp;<span class="cbadge"></span>'
                 : ''),
           };
 

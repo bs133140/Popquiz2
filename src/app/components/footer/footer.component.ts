@@ -115,5 +115,7 @@ export class FooterComponent implements OnInit {
     this.filter.emit(this.filterState);
   }
 
-  togglePrices() {}
+  togglePrices() {
+    this.ranking.emit(true);
+  }
 }

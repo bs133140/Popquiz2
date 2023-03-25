@@ -36,6 +36,7 @@ export class AppComponent {
   ranking(toggle: boolean = false) {
     if(toggle) {
       this.showRanking = !this.showRanking;
+      this.scrolling = false;
     }
     if (this.showRanking) {
       this.showList = false;

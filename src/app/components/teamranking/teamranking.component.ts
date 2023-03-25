@@ -29,6 +29,7 @@ export class TeamrankingComponent implements OnInit, AfterViewInit, OnChanges  {
   roundScore: number;
   showRoundup: boolean;
   totalScore: number;
+  hideRoundup: boolean;
 
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild('ranking') rankingWrapper: ElementRef;
@@ -39,6 +40,8 @@ export class TeamrankingComponent implements OnInit, AfterViewInit, OnChanges  {
   ngOnInit(): void {
     this.scoreboardService.scoreboard$.subscribe((scoreboard) => {
       this.scoreboard = scoreboard;
+      this.hideRoundup = false;
+      this.showRoundup = true;
       this.renderRanking();
     });
   }
@@ -73,6 +76,11 @@ export class TeamrankingComponent implements OnInit, AfterViewInit, OnChanges  {
     }
   }
 
+  doHideRoundup() {
+    this.hideRoundup = true;
+    setTimeout(()=>{this.showRoundup = false},2000);
+  }
+
   renderRanking() {
     const round = this.scoreboard.lastround;
     this.top3total = '';
@@ -90,7 +98,7 @@ export class TeamrankingComponent implements OnInit, AfterViewInit, OnChanges  {
     if (this.scoreboard.specSort) {
       this.displayedColumns = [
         'rank',
-        'mrank',
+        //'mrank',
         'srank',
         'diff',
         'team',
@@ -209,7 +217,7 @@ export class TeamrankingComponent implements OnInit, AfterViewInit, OnChanges  {
             mrank: 0,
             srank: rank.srank,
             diff: (diff>0?'+':(diff==0?'':'-')),
-            team: this.scoreboard.teams[rank.id-1].name + (this.scoreboard.teams[rank.id-1].type == 1?'&nbsp;&#9929;':''),
+            team: this.scoreboard.teams[rank.id-1].name + (this.scoreboard.teams[rank.id-1].type == 1?'&nbsp;<span class="cbadge"></span>':''),
             round:this.scoreboard.rankingPerRound[round-1][rrid0].score,
             nextround: this.scoreboard.rankingPerRound[round][rrid].score,
             total: '<span class="badge">' + rank.score +'</span>'
@@ -231,10 +239,10 @@ export class TeamrankingComponent implements OnInit, AfterViewInit, OnChanges  {
       this.title =  'DE STAND NA ' + this.roundName;        
   
       if(this.scoreboard.teamtype === 1) {
-        this.title += ' - Circuitploegen&nbsp;&#9929';
+        this.title += ' <br>Circuitploegen&nbsp;<span class="cbig"></span>';
       }
       if(this.scoreboard.teamtype === 2) {
-        this.title += ' - Gelegenheidsploegen';
+        this.title += ' <br>Gelegenheidsploegen';
       }
     }
 
