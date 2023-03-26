@@ -53,7 +53,7 @@ export class TeamlistComponent implements OnInit, OnChanges {
             pauze = true;
             setTimeout(()=>{this.scrollDirection = newDirection;pauze=false;}, 2000);
           }
-        }, 10);
+        }, 40);
       } else {
         clearInterval(this.scrollEvent);
       }

@@ -7,6 +7,8 @@
     top:0;
     background-color: rgba(246, 161, 16, 0.97);
     overflow:auto;
+    display:flex;
+    flex-direction:column;
 }
 
 .sticky {

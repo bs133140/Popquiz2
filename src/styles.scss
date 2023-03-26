@@ -60,6 +60,14 @@ body {
   background-image: url(assets/2023/certified-icon-y.svg);
 }
 
+.table-title {
+  background-color: rgba(246, 161, 16, 0.97);
+  font-size:25px;
+  line-height: 50px;
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+
   /* width */
 ::-webkit-scrollbar {
     width: 10px;
