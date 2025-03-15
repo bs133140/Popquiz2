@@ -1,27 +1,20 @@
-# Popquiz
+# Respons Popquiz
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+Popquiz scorebord
 
-## Development server
+Shortcuts:
+* Spatie: Open nieuw bestand
+* Q: Show toolbar
+* S: Toggle table views
+* D: Toggle auto scroll
+* F: Toggle filter
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+De uitslagen voor elk team worden per ronde ingevuld in het popquiz***.csv bestand (voorbeeld kan je vinden in de data folder), wanneer alles is ingevuld kan je de webpagina openen (index.html)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Via de 'q' toets komt een toolbar te voorschijn waar je via het icoontje helemaal rechts een bestand mee kan openen (of je kan gewoon op spatie drukken), éénmaal het bestand is ingeladen komen de resultaten te voorschijn.
 
-## Build
+In het eerste view kan je de scores per ronde terug vinden voor elk team, gerangschikt op teamnummer. Met de 's' toets ga je naar het tweede view waarin we de rangschikking na de laatst ingevulde ronde terugvinden.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Met de 'f' toets kan je toggelen tussen 'alle resultaten', 'circuitploegen' en 'gelegenheidsploegen' (aangegeven in het csv bestand in het 'type' veld, 1 = circuitploeg) 
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

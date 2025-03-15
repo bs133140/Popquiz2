@@ -1,71 +1,71 @@
-NR,PLOEG,TYPE,Reeks 1,Reeks 2,Reeks 3,Reeks 4,Reeks 5,Reeks 6,Reeks 7,Reeks 8,Reeks 9,Reeks 10,Reeks 11,TOT.
-,MAXIMUM,,30,30,30,30,30,30,30,30,40,30,30,150
-1,De bevroren aperitiefhapjes,0,,,,,,,,,,,,
-2,De Stijlpaardroggen,0,,,,,,,,,,,,
-3,Het Negende,0,,,,,,,,,,,,
-4,Lou Reed in velo,1,,,,,,,,,,,,
-5,Los Locos,1,,,,,,,,,,,,
-6,Nog Locos,1,,,,,,,,,,,,
-7,Kriek Max,0,,,,,,,,,,,,
-8,Greatest Tits,1,,,,,,,,,,,,
-9,Directieteam,0,,,,,,,,,,,,
-10,The 4 sLEEpless horsemen of the apocalypse,1,,,,,,,,,,,,
-11,The Pale Riders From Philadelphia,1,,,,,,,,,,,,
-12,Paris Hilton Lookalikes,1,,,,,,,,,,,,
-13,In Extremis,0,,,,,,,,,,,,
-14,Starbuk & Apollo,1,,,,,,,,,,,,
-15,Formerly known as RJFC,0,,,,,,,,,,,,
-16,Die Schmetterlinge,0,,,,,,,,,,,,
-17,De buis van Eustachius,1,,,,,,,,,,,,
-18,Country Trash,0,,,,,,,,,,,,
-19,Garnizoen!,0,,,,,,,,,,,,
-20,De vierkante meter,0,,,,,,,,,,,,
-21,Goedkoop Zat In 't Halve Maantje,1,,,,,,,,,,,,
-22,Charlotte Mocht Nog Eens Mee,0,,,,,,,,,,,,
-23,"Jan, Piet, Joris en Sam Gooris",1,,,,,,,,,,,,
-24,Pedro and the Sharks,0,,,,,,,,,,,,
-25,Zottegem Blues,0,,,,,,,,,,,,
-26,Conner Niopkomen,0,,,,,,,,,,,,
-27,De Floyds,0,,,,,,,,,,,,
-28,Scary Monsters,1,,,,,,,,,,,,
-29,Zazawie,0,,,,,,,,,,,,
-30,Team Smartacus,0,,,,,,,,,,,,
-31,Barbara Spreidstand,0,,,,,,,,,,,,
-32,Popingers,1,,,,,,,,,,,,
-33,Mississippi Queen,0,,,,,,,,,,,,
-34,Whores with no name,0,,,,,,,,,,,,
-35,No use for a name,0,,,,,,,,,,,,
-36,Judas Piest,0,,,,,,,,,,,,
-37,Team Dink,0,,,,,,,,,,,,
-38,Team Faan De Bisschop,0,,,,,,,,,,,,
-39,Rode BMW staat fout geparkeerd,0,,,,,,,,,,,,
-40,Gilly De Wieter,0,,,,,,,,,,,,
-41,1912 Titanic Swim Team,0,,,,,,,,,,,,
-42,Green Onions,1,,,,,,,,,,,,
-43,Michiels Crew,0,,,,,,,,,,,,
-44,Rock Monsieur,1,,,,,,,,,,,,
-45,K4,0,,,,,,,,,,,,
-46,Testedoene,1,,,,,,,,,,,,
-47,Pluttbugs,0,,,,,,,,,,,,
-48,Cevisten,0,,,,,,,,,,,,
-49,Tequila Overdrive,1,,,,,,,,,,,,
-50,Flying Foxes,0,,,,,,,,,,,,
-51,Op hoop van zegen,0,,,,,,,,,,,,
-52,De Vierde Man,0,,,,,,,,,,,,
-53,Never Gonna Quiz You Up,0,,,,,,,,,,,,
-54,De Sexpistolets,0,,,,,,,,,,,,
-55,No ID,1,,,,,,,,,,,,
-56,Rock Anzegem,0,,,,,,,,,,,,
-57,Quizzers In Crime,0,,,,,,,,,,,,
-58,Pol Van Mietsies Giete,0,,,,,,,,,,,,
-59,King Quizard and the Quizard Quizard,0,,,,,,,,,,,,
-60,De plankierkaarters,0,,,,,,,,,,,,
-61,The Silver Foxes,0,,,,,,,,,,,,
-62,The Oldies,0,,,,,,,,,,,,
-63,The Pimped Shrimps,0,,,,,,,,,,,,
-64,Fed With the Papspoon,1,,,,,,,,,,,,
-65,Tennessee Quiskey,0,,,,,,,,,,,,
-66,Schnippel Schnappel,0,,,,,,,,,,,,
-67,Ramenlikkers,0,,,,,,,,,,,,
-68,Team Kimchiiii,0,,,,,,,,,,,,
-69,METEA,0,,,,,,,,,,,,
+NR;PLOEG;TYPE;Reeks 1;Reeks 2;Reeks 3;Reeks 4;Reeks 5;Reeks 6;Reeks 7;Reeks 8;Reeks 9;Reeks 10;Reeks 11;TOT.
+;MAXIMUM;;30;30;30;30;30;30;30;30;40;30;30;150
+1;De bevroren aperitiefhapjes;0;;;;;;;;;;;;
+2;De Stijlpaardroggen;0;;;;;;;;;;;;
+3;Het Negende;0;;;;;;;;;;;;
+4;Lou Reed in velo;1;;;;;;;;;;;;
+5;Los Locos;1;;;;;;;;;;;;
+6;Nog Locos;1;;;;;;;;;;;;
+7;Kriek Max;0;;;;;;;;;;;;
+8;Greatest Tits;1;;;;;;;;;;;;
+9;Directieteam;0;;;;;;;;;;;;
+10;The 4 sLEEpless horsemen of the apocalypse;1;;;;;;;;;;;;
+11;The Pale Riders From Philadelphia;1;;;;;;;;;;;;
+12;Paris Hilton Lookalikes;1;;;;;;;;;;;;
+13;In Extremis;0;;;;;;;;;;;;
+14;Starbuk & Apollo;1;;;;;;;;;;;;
+15;Formerly known as RJFC;0;;;;;;;;;;;;
+16;Die Schmetterlinge;0;;;;;;;;;;;;
+17;De buis van Eustachius;1;;;;;;;;;;;;
+18;Country Trash;0;;;;;;;;;;;;
+19;Garnizoen!;0;;;;;;;;;;;;
+20;De vierkante meter;0;;;;;;;;;;;;
+21;Goedkoop Zat In 't Halve Maantje;1;;;;;;;;;;;;
+22;Charlotte Mocht Nog Eens Mee;0;;;;;;;;;;;;
+23;Jan, Piet, Joris en Sam Gooris;1;;;;;;;;;;;;
+24;Pedro and the Sharks;0;;;;;;;;;;;;
+25;Zottegem Blues;0;;;;;;;;;;;;
+26;Conner Niopkomen;0;;;;;;;;;;;;
+27;De Floyds;0;;;;;;;;;;;;
+28;Scary Monsters;1;;;;;;;;;;;;
+29;Zazawie;0;;;;;;;;;;;;
+30;Team Smartacus;0;;;;;;;;;;;;
+31;Barbara Spreidstand;0;;;;;;;;;;;;
+32;Popingers;1;;;;;;;;;;;;
+33;Mississippi Queen;0;;;;;;;;;;;;
+34;Whores with no name;0;;;;;;;;;;;;
+35;No use for a name;0;;;;;;;;;;;;
+36;Judas Piest;0;;;;;;;;;;;;
+37;Team Dink;0;;;;;;;;;;;;
+38;Team Faan De Bisschop;0;;;;;;;;;;;;
+39;Rode BMW staat fout geparkeerd;0;;;;;;;;;;;;
+40;Gilly De Wieter;0;;;;;;;;;;;;
+41;1912 Titanic Swim Team;0;;;;;;;;;;;;
+42;Green Onions;1;;;;;;;;;;;;
+43;Michiels Crew;0;;;;;;;;;;;;
+44;Rock Monsieur;1;;;;;;;;;;;;
+45;K4;0;;;;;;;;;;;;
+46;Testedoene;1;;;;;;;;;;;;
+47;Pluttbugs;0;;;;;;;;;;;;
+48;Cevisten;0;;;;;;;;;;;;
+49;Tequila Overdrive;1;;;;;;;;;;;;
+50;Flying Foxes;0;;;;;;;;;;;;
+51;Op hoop van zegen;0;;;;;;;;;;;;
+52;De Vierde Man;0;;;;;;;;;;;;
+53;Never Gonna Quiz You Up;0;;;;;;;;;;;;
+54;De Sexpistolets;0;;;;;;;;;;;;
+55;No ID;1;;;;;;;;;;;;
+56;Rock Anzegem;0;;;;;;;;;;;;
+57;Quizzers In Crime;0;;;;;;;;;;;;
+58;Pol Van Mietsies Giete;0;;;;;;;;;;;;
+59;King Quizard and the Quizard Quizard;0;;;;;;;;;;;;
+60;De plankierkaarters;0;;;;;;;;;;;;
+61;The Silver Foxes;0;;;;;;;;;;;;
+62;The Oldies;0;;;;;;;;;;;;
+63;The Pimped Shrimps;0;;;;;;;;;;;;
+64;Fed With the Papspoon;1;;;;;;;;;;;;
+65;Tennessee Quiskey;0;;;;;;;;;;;;
+66;Schnippel Schnappel;0;;;;;;;;;;;;
+67;Ramenlikkers;0;;;;;;;;;;;;
+68;Team Kimchiiii;0;;;;;;;;;;;;
+69;METEA;0;;;;;;;;;;;;
