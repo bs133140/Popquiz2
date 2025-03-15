@@ -5,14 +5,14 @@
     width: 100%;
     z-index: 10;
     top:0;
-    background-color: rgba(246, 161, 16, 0.97);
+    background-color: rgba(255, 236, 45, 0.97);
     overflow:auto;
     display:flex;
     flex-direction:column;
 }
 
 .sticky {
-    background-color: rgb(246, 161, 16);
+    background-color: rgb(255, 236, 45);
 }
 
 .list-roundup {
@@ -22,12 +22,12 @@
     width: 100%;
     z-index: 100;
     top:0;
-    background-color: black;
+    background-color: rgb(255, 236, 45);
     overflow:auto;
     display:flex;
     align-items: center;
     justify-content: center;
-    color: rgba(246, 161, 16, 0.97);
+    color: black;
     transition: opacity .8s ease-in-out;
 }
 
@@ -39,7 +39,7 @@
     flex-grow:1;
     width: 70vw;
     height: 80vh;
-    border: 4px solid #000;
+    /*border: 4px solid #000;*/
     border-radius: 20px;
     padding: 20px;
     display: flex;
@@ -47,9 +47,11 @@
 }
 
 .title {
-text-align: center;
-font-size:55px;
-padding-bottom: 4vh;
+    text-align: center;
+    font-size:55px;
+    padding-bottom: 4vh;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
 }
 
 .row {
@@ -71,6 +73,13 @@ font-size:35px;
     font-weight: bold;
 }
 
+.highscore span {
+    display: inline-block;
+    padding: 0 5px;
+    color: rgb(255, 236, 45);
+    background-color: #ff107b;
+}
+
 .legenda2 {
     display:flex;
     border-top: 2px solid black;
@@ -86,4 +95,29 @@ font-size:35px;
     img{
         height:100vh;
     }
+}
+
+.logo {
+    position: absolute;
+    bottom:20px;
+    right:20px;
+    display: inline-block;
+    
+    img {
+        height: 60px;
+    }
+}
+
+.round-title {
+    text-align: center;
+}
+
+.round-title span{
+    display: inline-block;
+    padding: 0 5px;
+    color: rgb(255, 236, 45);
+    background-color: #ff107b;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
 }

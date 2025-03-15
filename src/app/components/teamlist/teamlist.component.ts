@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnChanges, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnChanges, OnInit, ViewChild, HostListener } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Column, Scoreboard } from 'src/app/models/scoreboard.model';
 import { ScoreboardService } from 'src/app/services/scoreboard.service';
@@ -23,6 +23,15 @@ export class TeamlistComponent implements OnInit, OnChanges {
 
   @Input() autoscroll: boolean;
   @ViewChild('list') rankingWrapper: ElementRef;
+
+  @HostListener('window:keypress', ['$event'])
+    keyEvent(event: KeyboardEvent) {
+      
+      // Toggle menu
+      if (event.key.toLowerCase() === 'g') {
+        this.doHideRoundup();
+      } 
+    }
 
   constructor(private scoreboardService: ScoreboardService) {}
 
@@ -71,12 +80,12 @@ export class TeamlistComponent implements OnInit, OnChanges {
     this.displayedColumns = ['id', 'team'];
     this.title =  'SCORES PER RONDE';     
     this.showRoundup = true;   
-  
+
     if(this.scoreboard.teamtype === 1) {
-      this.title += ' <br>Circuitploegen&nbsp;<span class="cbig"></span>';
+      this.title += ' <br><span class="t-type">Circuitploegen</span>&nbsp;<span class="cbig"></span>';
     }
     if(this.scoreboard.teamtype === 2) {
-      this.title += ' <br>Gelegenheidsploegen';
+      this.title += ' <br><span class="t-type">Gelegenheidsploegen</span>';
     }
 
     // Set rounds

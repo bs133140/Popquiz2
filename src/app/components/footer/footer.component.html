@@ -1,28 +1,29 @@
 <footer>
     <div class="Menu" [ngClass]="{'sticky':stickyMenu}">
       <div class="logo">
-        <img src="../../../assets/2023/logo.jpg" />
+        <img src="../../../assets/2025/logo.png" />
       </div>
       <div class="options">
         <ul>
             <li>
-                <button mat-icon-button (click)="openFileDialog()" title="Open"><fa-icon [icon]="faUpload"></fa-icon></button>
+                <button mat-icon-button (click)="openFileDialog()" title="Open [SPACE]"><fa-icon [icon]="faUpload"></fa-icon></button>
                 <input #fileInput type="file" id="fileInput" (change)="readFile()" accept=".csv" />
             </li>
             <li *ngIf="loaded">
             <button mat-icon-button (click)="togglePrices()" title="Prijzen"><fa-icon [icon]="faGift"></fa-icon></button>
             </li>
             <li *ngIf="loaded">
-            <button mat-icon-button (click)="toggleFilter()" title="Filter"><fa-icon [icon]="faFilter"></fa-icon></button>
+            <button mat-icon-button (click)="toggleFilter()" title="Filter [F]"><fa-icon [icon]="faFilter"></fa-icon></button>
             </li>
             <li *ngIf="loaded">
-            <button mat-icon-button (click)="toggleRanking()" title="Podium"><fa-icon [icon]="faChartBar"></fa-icon></button>
+            <button mat-icon-button (click)="toggleRanking()" title="Podium [S]"><fa-icon [icon]="faChartBar"></fa-icon></button>
             </li>
           <li *ngIf="loaded">
-            <button mat-icon-button (click)="toggleAutoscroll()" title="Autoscroll"><fa-icon [icon]="faPlay"></fa-icon></button>
+            <button mat-icon-button (click)="toggleAutoscroll()" title="Autoscroll [D]"><fa-icon [icon]="faPlay"></fa-icon></button>
           </li>
 
         </ul>
       </div>          
     </div>
   </footer>
+  <div class="btn-menu" title="MENU [Q]" (click)="openMenu()">MENU</div>

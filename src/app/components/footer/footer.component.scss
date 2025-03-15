@@ -11,10 +11,11 @@ footer {
     bottom:0;
     height:0px;
     width: 100%;;
-    background-color: rgb(246, 161, 16);  
+    background-color: rgb(255, 236, 45);  
     overflow: hidden;
     display:flex;
     transition: height 0.3s;
+    border-top:2px solid black;
   }
   
   footer:hover .Menu{
@@ -44,6 +45,8 @@ footer {
     flex-direction: row-reverse;
     align-items: center;
     height: 100%;
+    margin-right: 10px;
+    color: #ff107b;
   }
   
   li {
@@ -59,3 +62,17 @@ footer {
     display: none;
   }
   
+  .btn-menu {
+    position:absolute;
+    top: 20px;
+    left:20px;  
+    border:1px dashed black;
+    z-index:1;
+    text-align: center;
+    background-color: rgb(255, 236, 45);
+    font-size:0.8em;
+    opacity: 0.34;
+    display: inline-block;
+    padding: 5px 10px;
+    cursor: pointer;
+  }

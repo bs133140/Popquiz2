@@ -1,24 +1,28 @@
 <div class="ranking-roundup" *ngIf="showRoundup"  [ngClass]="{'hidden': hideRoundup}" (click)="doHideRoundup()">
-  <div class="sideimg"><img src="../../../assets/2023/logov1.jpg"/></div>
   <div class="panel">
       <div class="title" [innerHTML]="title"></div>
       <div class="row">
           <div>
-              <h4>TOP 3 {{roundName}} [{{roundScore}}]</h4>
+              <h4>TOP 3 {{roundName}} <span> /{{roundScore}} </span></h4>
               <div class="top3lastround" [innerHTML]="top3lastround">                
               </div>
           </div>
           <div>
-              <h4>TOP 3 TOTAAL [{{totalScore}}]</h4>
+              <h4>TOP 3 TOTAAL <span> /{{totalScore}} </span></h4>
               <div class="top3total" [innerHTML]="top3total"></div>
           </div>
       </div>
-      <div class="legenda">
+      <!--
+            <div class="legenda">
           <div>+ = Omhoog in de ranking tov vorige reeks</div>
           <div>- = Omlaag in de ranking tov vorige reeks</div>
         </div>
+      -->
+
   </div>
-  <div class="sideimg"><img src="../../../assets/2023/logov2.jpg"/></div>
+  <div class="logo">
+    <img src="../../../assets/2025/logo.png" />
+  </div>
 </div>
 
 
@@ -47,7 +51,7 @@
 
         <ng-container matColumnDef="diff">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>  </th>
-            <td mat-cell *matCellDef="let element"> {{element.diff}} </td>
+            <td mat-cell *matCellDef="let element"><span [innerHTML]="element.diff"></span></td>
           </ng-container>
 
         <ng-container matColumnDef="team">

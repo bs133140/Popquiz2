@@ -19,11 +19,11 @@ body {
     font-size: 14px;
     font-weight: bold;
     line-height: 1;
-    color:rgb(246, 161, 16); 
+    color: rgb(255, 236, 45);
+    background-color: #ff107b;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
-    background-color: #000;
     border-radius: 10px;
   }
 
@@ -55,9 +55,9 @@ body {
 }
 
 .cbig{
-  width:42px;
-  height:42px;
-  background-image: url(assets/2023/certified-icon-y.svg);
+  width:30px;
+  height:30px;
+  /*background-image: url(assets/2023/certified-icon-y.svg);*/
 }
 
 .table-title {
@@ -92,4 +92,18 @@ body {
     border-top: 2px solid black;
     padding-top:10px;
 	font-size:14px;
+  margin-top:10px;
+}
+
+span.score {
+  display: inline-block;
+  padding: 0 5px;
+  color: rgb(255, 236, 45);
+  background-color: #ff107b;
+  font-size: 0.9em;
+    font-weight: bold;
+}
+
+.t-type {
+  font-size: 0.7em;
 }

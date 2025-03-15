@@ -1,5 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { AfterViewInit, Component, ElementRef, Input, OnChanges, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnChanges, OnInit, ViewChild, HostListener } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Column, Scoreboard } from 'src/app/models/scoreboard.model';
@@ -34,6 +34,15 @@ export class TeamrankingComponent implements OnInit, AfterViewInit, OnChanges  {
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild('ranking') rankingWrapper: ElementRef;
   @Input() autoscroll: boolean;
+
+    @HostListener('window:keypress', ['$event'])
+      keyEvent(event: KeyboardEvent) {
+        
+        // Toggle menu
+        if (event.key.toLowerCase() === 'g') {
+          this.doHideRoundup();
+        } 
+      }
 
   constructor(private scoreboardService: ScoreboardService) {}
 
@@ -132,9 +141,9 @@ export class TeamrankingComponent implements OnInit, AfterViewInit, OnChanges  {
               this.top3rnk +
               '. ' +
               this.scoreboard.teams[tms.id - 1].name +
-              ' (' +
+              ' <span class="score">' +
               tms.score +
-              ')<br/>';
+              '</span><br/>';
             this.top3lstcnt++;
             this.top3prev = tms.score;
           }
@@ -208,7 +217,7 @@ export class TeamrankingComponent implements OnInit, AfterViewInit, OnChanges  {
           if(defrank <= 3)
           {  
             const percentage = (rank.score / this.totalScore * 100).toFixed(1);
-            this.top3total += defrank + ". " + this.scoreboard.teams[rank.id-1].name + " ("+rank.score+" - " + percentage + "%)<br>";
+            this.top3total += defrank + ". " + this.scoreboard.teams[rank.id-1].name + " <span class='score'>"+rank.score+" - " + percentage + "%</span><br>";
           }
   
           // render table
@@ -216,7 +225,7 @@ export class TeamrankingComponent implements OnInit, AfterViewInit, OnChanges  {
             rank: defrank,
             mrank: 0,
             srank: rank.srank,
-            diff: (diff>0?'+':(diff==0?'':'-')),
+            diff: (diff>0?'&#11165;':(diff==0?'':'&#11167;')),
             team: this.scoreboard.teams[rank.id-1].name + (this.scoreboard.teams[rank.id-1].type == 1?'&nbsp;<span class="cbadge"></span>':''),
             round:this.scoreboard.rankingPerRound[round-1][rrid0].score,
             nextround: this.scoreboard.rankingPerRound[round][rrid].score,
@@ -239,10 +248,10 @@ export class TeamrankingComponent implements OnInit, AfterViewInit, OnChanges  {
       this.title =  'DE STAND NA ' + this.roundName;        
   
       if(this.scoreboard.teamtype === 1) {
-        this.title += ' <br>Circuitploegen&nbsp;<span class="cbig"></span>';
+        this.title += ' <br><span class="t-type">Circuitploegen</span>&nbsp;<span class="cbig"></span>';
       }
       if(this.scoreboard.teamtype === 2) {
-        this.title += ' <br>Gelegenheidsploegen';
+        this.title += ' <br><span class="t-type">Gelegenheidsploegen</span>';
       }
     }
 

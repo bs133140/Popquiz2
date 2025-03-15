@@ -92,6 +92,11 @@ export class FooterComponent implements OnInit {
     reader.readAsText(file);
   }
 
+  openMenu() {
+    this.stickyMenu = true; // !this.stickyMenu;
+    this.showPoster();
+  }
+
   showPoster(){
     this.home.emit();
   }

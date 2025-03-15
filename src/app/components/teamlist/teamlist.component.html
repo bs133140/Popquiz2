@@ -1,27 +1,36 @@
 <div class="list-roundup" *ngIf="showRoundup" [ngClass]="{'hidden': hideRoundup}" (click)="doHideRoundup()">
-  <div class="sideimg"><img src="../../../assets/2023/logov1.jpg"/></div>
   <div class="panel">
       <div class="title" [innerHTML]="title"></div>
+      <div class="round-title">
+        <span>
+          {{scoreboard.rounds[scoreboard.lastround].name}}
+        </span>
+      </div>
       <div class="row">
           <div>
               <h4>HOOGSTE SCORE</h4>
               <div class="highscore">
-                {{scoreboard.lastroundhighest}} / {{scoreboard.rounds[scoreboard.lastround].max}}
+                <span>{{scoreboard.lastroundhighest}} / {{scoreboard.rounds[scoreboard.lastround].max}}</span>
               </div>
           </div>
           <div>
               <h4>GEMIDDELDE SCORE</h4>
               <div class="highscore">
-                {{lastroundaverage}} / {{scoreboard.rounds[scoreboard.lastround].max}}
+                <span>{{lastroundaverage}} / {{scoreboard.rounds[scoreboard.lastround].max}}</span>
               </div>
           </div>
       </div>
-      <div class="legenda2">
+      <!--
+            <div class="legenda2">
         <div><span class="badge orangei">&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;Minder goede score</div>
         <div><span class="badge redi">&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;Slechte score</div>
       </div>
+      -->
+
   </div>
-  <div class="sideimg"><img src="../../../assets/2023/logov2.jpg"/></div>
+  <div class="logo">
+    <img src="../../../assets/2025/logo.png" />
+  </div>
 </div>
 
 <div class="list" #list>
