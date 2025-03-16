@@ -9,6 +9,7 @@
     overflow:auto;
     display:flex;
     flex-direction:column;
+    padding: 0 50px;
 }
 
 .sticky {
@@ -34,6 +35,7 @@
     justify-content: center;
     color: black;
     transition: opacity .8s ease-in-out;
+    padding: 0 50px;
 }
 
 .hidden {
@@ -92,7 +94,7 @@ h4 {
 .logo {
     position: absolute;
     bottom:20px;
-    right:20px;
+    right:130px;
     display: inline-block;
     
     img {
